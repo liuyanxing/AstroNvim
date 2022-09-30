@@ -160,6 +160,7 @@ local astro_plugins = {
 
   -- Built-in LSP
   ["neovim/nvim-lspconfig"] = {},
+  ["williamboman/nvim-lsp-installer"] = {},
 
   -- LSP manager
   ["jayp0521/mason-null-ls.nvim"] = {

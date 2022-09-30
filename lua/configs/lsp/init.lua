@@ -1,5 +1,11 @@
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then return end
+
+local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok then
+	return
+end
+
 local sign_define = vim.fn.sign_define
 local user_plugin_opts = astronvim.user_plugin_opts
 
@@ -33,6 +39,13 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 require "configs.lsp.handlers"
 require "configs.mason-lspconfig"
 
-for _, server in ipairs(user_plugin_opts "lsp.servers") do
+local servers = { "sumneko_lua" , "tsserver" }
+
+lsp_installer.setup({
+	ensure_installed = servers,
+})
+
+-- for _, server in ipairs(user_plugin_opts "lsp.servers") do
+for _, server in ipairs(servers) do
   astronvim.lsp.setup(server)
 end
