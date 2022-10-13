@@ -39,7 +39,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 require "configs.lsp.handlers"
 require "configs.mason-lspconfig"
 
-local servers = { "sumneko_lua" , "tsserver" }
+local servers = { "sumneko_lua" , "tsserver", "clangd", "volar" }
 
 lsp_installer.setup({
 	ensure_installed = servers,
