@@ -30,7 +30,7 @@ neotree.setup(astronvim.user_plugin_opts("plugins.neo-tree", {
     },
   },
   window = {
-    width = 25,
+    width = 42,
     mappings = {
       ["o"] = "open",
     },
@@ -60,3 +60,4 @@ neotree.setup(astronvim.user_plugin_opts("plugins.neo-tree", {
     { event = "neo_tree_buffer_enter", handler = function(_) vim.opt_local.signcolumn = "auto" end },
   },
 }))
+

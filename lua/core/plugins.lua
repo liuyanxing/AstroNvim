@@ -5,11 +5,15 @@ local astro_plugins = {
   -- Optimiser
   ["lewis6991/impatient.nvim"] = {},
 
+  ["ggandor/leap.nvim"] = {},
+
   -- Lua functions
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
 
   -- Popup API
   ["nvim-lua/popup.nvim"] = {},
+
+  ["sickill/vim-monokai"] = {},
 
   -- Indent detection
   ["Darazaki/indent-o-matic"] = {
