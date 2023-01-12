@@ -1,9 +1,2 @@
-!colors/default_theme.lua
-colors/*
-docs
-ginit.vim
-snippets
 lua/packer_compiled.lua
-plugin
-ftplugin
-spell
+
