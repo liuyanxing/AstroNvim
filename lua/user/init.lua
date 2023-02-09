@@ -164,7 +164,7 @@ local config = {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = false, -- enable or disable format on save globally
+        enabled = true, -- enable or disable format on save globally
         disable_filetypes = { -- disable format on save for specified filetypes
           "cpp",
         },
@@ -266,6 +266,11 @@ local config = {
         event = 'VimEnter',
         config = function() require('neoscroll').setup() end
       },
+      ["github/copilot.vim"] = {
+        config = function()
+          require('copilot').setup()
+        end
+      }
     },
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
